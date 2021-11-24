@@ -29,9 +29,7 @@ class TranslationServiceProvider extends ServiceProvider
 
         $this->publishAssets();
 
-        if (config('translation.driver') == 'database') {
-            $this->loadMigrations();
-        }
+        $this->loadMigrations();
 
         $this->loadTranslations();
 
